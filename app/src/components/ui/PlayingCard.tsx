@@ -36,7 +36,7 @@ export function PlayingCard({ card, className, isFlipped = false }: PlayingCardP
 
                 {/* Title */}
                 <div className="h-10 flex items-center justify-center bg-transparent z-10">
-                    <h3 className="font-display uppercase text-xl font-bold text-[var(--color-wood-dark)] tracking-wider">
+                    <h3 className="font-display uppercase text-base sm:text-xl font-bold text-[var(--color-wood-dark)] tracking-wider">
                         {card.title}
                     </h3>
                 </div>

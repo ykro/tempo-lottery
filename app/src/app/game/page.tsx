@@ -6,7 +6,7 @@ import { PlayingCard } from "@/components/ui/PlayingCard";
 import { CornerOrnaments } from "@/components/ui/CornerOrnaments";
 import { WoodButton } from "@/components/ui/WoodButton";
 import { Bean } from "@/components/ui/Bean";
-import { Heart, HeartOff, Home, RotateCcw } from "lucide-react";
+import { Heart, HeartOff, Home, RotateCcw, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -105,17 +105,26 @@ export default function GamePage() {
     // --- Game Loop & Dynamic Difficulty ---
     // Calculate duration: Starts at 10s, decreases by 150ms per card, floor at 3.5s
     const currentDuration = Math.max(3500, CARD_DURATION - (currentCardIndex * 150));
+    const [hasShownTapHint, setHasShownTapHint] = useState(false);
 
     useEffect(() => {
         if (!isPlaying || gameOver || victory) return;
 
         // Use setTimeout for variable duration
         const timer = setTimeout(() => {
+            // Hint Logic: If user waited for the full timer, tell them they can tap.
+            if (!hasShownTapHint && currentCardIndex > 0) {
+                toast("💡 Tip: ¡Toca la carta para avanzar más rápido!", {
+                    style: { backgroundColor: '#3e2723', color: '#f4e4bc', border: '2px solid #5d4037' },
+                    duration: 4000,
+                });
+                setHasShownTapHint(true);
+            }
             advanceCard();
         }, currentDuration);
 
         return () => clearTimeout(timer);
-    }, [isPlaying, gameOver, victory, currentCardIndex, advanceCard, currentDuration]);
+    }, [isPlaying, gameOver, victory, currentCardIndex, advanceCard, currentDuration, hasShownTapHint]);
 
     const currentCard = currentCardIndex >= 0 ? deck[currentCardIndex] : null;
 
@@ -195,60 +204,91 @@ export default function GamePage() {
         }
     };
 
+    // --- Auto-Scroll on Load (Mobile) ---
+    useEffect(() => {
+        // Small delay to ensure layout is ready
+        setTimeout(() => {
+            window.scrollTo({ top: 60, behavior: 'smooth' });
+        }, 500);
+    }, []);
+
     return (
         <main className="min-h-screen flex flex-col p-2 max-w-5xl mx-auto relative overflow-hidden">
-            <CornerOrnaments />
+            <div className="hidden lg:block">
+                <CornerOrnaments />
+            </div>
 
             {/* Top Bar */}
-            <div className="flex items-center justify-between h-20 w-full z-20 px-2 mt-2">
+            <div className="flex items-center justify-between h-16 lg:h-20 w-full z-20 px-2 mt-2 shrink-0">
                 <Link href="/">
-                    <button className="bg-[#5d4037] p-3 rounded-xl border-4 border-[#3e2723] text-white shadow-xl active:scale-95 transition-transform">
-                        <Home size={28} />
+                    <button className="bg-[#5d4037] p-2 lg:p-3 rounded-xl lg:border-4 border-[#3e2723] text-white shadow-xl active:scale-95 transition-transform">
+                        <Home className="w-6 h-6 lg:w-7 lg:h-7" />
                     </button>
                 </Link>
 
-                {/* Lives Container - Framed */}
-                <div className="flex gap-2 bg-[#d7c598] p-2 px-4 rounded-xl border-4 border-[#3e2723] shadow-lg wood-texture transform rotate-1">
+                {/* Lives Container */}
+                <div className="flex gap-2 bg-[#d7c598] p-1.5 lg:p-2 px-3 lg:px-4 rounded-xl lg:border-4 border-[#3e2723] shadow-lg wood-texture transform rotate-1">
                     {[1, 2, 3].map((i) => (
                         <motion.div
                             key={i}
-                            className="bg-[#3e2723] p-1 rounded-md border border-[#8d6e63] shadow-inner"
+                            className="bg-[#3e2723] p-0.5 lg:p-1 rounded-md shadow-inner"
                             animate={{ scale: i <= lives ? 1 : 0.8, opacity: i <= lives ? 1 : 0.5 }}
                         >
-                            <Heart className={cn("w-6 h-6 sm:w-8 sm:h-8", i <= lives ? "fill-red-600 stroke-red-900" : "fill-stone-700 stroke-stone-800")} />
+                            <Heart className={cn("w-5 h-5 lg:w-8 lg:h-8", i <= lives ? "fill-red-600 stroke-red-900" : "fill-stone-700 stroke-stone-800")} />
                         </motion.div>
                     ))}
                 </div>
             </div>
 
             {/* Main Content Area - Responsive Layout */}
-            <div className="flex-1 flex flex-col lg:flex-row-reverse items-center justify-center gap-8 w-full z-10 p-4">
+            <div className="flex-1 flex flex-col lg:flex-row-reverse items-center justify-start lg:justify-center gap-2 lg:gap-8 w-full z-10 p-1 lg:p-4">
 
                 {/* Caller / Deck Section */}
-                <div className="flex flex-col items-center justify-center gap-4 min-h-[300px] relative lg:w-1/2">
-                    <AnimatePresence mode="wait">
-                        {currentCard ? (
-                            <motion.div
-                                key={currentCard.id}
-                                initial={{ scale: 0.5, opacity: 0, y: -50 }}
-                                animate={{ scale: 1, opacity: 1, y: 0 }}
-                                exit={{ scale: 0.8, opacity: 0, x: -100 }}
-                                className="relative z-10"
+                <div className="flex flex-col items-center justify-center gap-2 lg:gap-4 min-h-[220px] lg:min-h-[300px] relative lg:w-1/2 w-full shrink-0">
+
+                    {/* Mobile: Card + Side Button Container */}
+                    {/* Width restricted to ensure card stays centered but container allows button to sit on side */}
+                    <div className="relative flex items-center justify-center w-64 lg:w-auto">
+
+                        <AnimatePresence mode="wait">
+                            {currentCard ? (
+                                <motion.div
+                                    key={currentCard.id}
+                                    initial={{ scale: 0.5, opacity: 0, y: -50 }}
+                                    animate={{ scale: 1, opacity: 1, y: 0 }}
+                                    exit={{ scale: 0.8, opacity: 0, x: -100 }}
+                                    className="relative z-10 cursor-pointer"
+                                    onClick={() => advanceCard(false)}
+                                    title="Click to next card"
+                                >
+                                    <PlayingCard card={currentCard} className="w-48 lg:w-80 shadow-2xl skew-x-1" />
+                                </motion.div>
+                            ) : (
+                                <div className="w-40 lg:w-56 h-[min(250px,30vh)] flex items-center justify-center bg-[#f0e6d2] lg:border-8 border-[#3e2723] rounded-lg opacity-80 shadow-xl wood-texture">
+                                    <span className="font-display text-2xl animate-pulse text-[#3e2723]">...</span>
+                                </div>
+                            )}
+                        </AnimatePresence>
+
+                        {/* Mobile Side Next Button - Moved outside the card area */}
+                        {/* Reverted to Icon with Box, positioned to the right */}
+                        <div className="absolute -right-2 top-1/2 -translate-y-1/2 lg:hidden z-30 translate-x-full">
+                            <WoodButton
+                                onClick={() => advanceCard(false)}
+                                className="h-24 w-12 flex items-center justify-center rounded-xl text-white shadow-xl active:scale-95 transition-transform border-4 border-[#3e2723]"
+                                disabled={!isPlaying || gameOver}
+                                aria-label="Siguiente Carta"
                             >
-                                <PlayingCard card={currentCard} className="w-64 lg:w-80 shadow-2xl skew-x-1" />
-                            </motion.div>
-                        ) : (
-                            <div className="w-56 h-[min(350px,40vh)] flex items-center justify-center bg-[#f0e6d2] border-8 border-[#3e2723] rounded-lg opacity-80 shadow-xl wood-texture">
-                                <span className="font-display text-2xl animate-pulse text-[#3e2723]">...</span>
-                            </div>
-                        )}
-                    </AnimatePresence>
+                                <ArrowRight className="w-8 h-8" />
+                            </WoodButton>
+                        </div>
+                    </div>
 
                     {/* Controls & Timer */}
-                    <div className="flex flex-col gap-4 w-64 lg:w-80">
+                    <div className="flex flex-col gap-4 w-48 lg:w-80">
                         {/* Timer Bar */}
                         {isPlaying && (
-                            <div className="w-full h-4 bg-[#3e2723] rounded-full overflow-hidden border-2 border-[#5d4037] shadow-inner">
+                            <div className="w-full h-3 lg:h-4 bg-[#3e2723] rounded-full overflow-hidden lg:border-2 border-[#5d4037] shadow-inner mt-2">
                                 <motion.div
                                     key={currentCardIndex}
                                     initial={{ width: "0%" }}
@@ -259,10 +299,10 @@ export default function GamePage() {
                             </div>
                         )}
 
-                        {/* Next Button */}
+                        {/* Next Button (Desktop Only) */}
                         <WoodButton
                             onClick={() => advanceCard(false)}
-                            className="w-full py-4 text-xl flex items-center justify-center gap-2"
+                            className="w-full py-4 text-xl hidden lg:flex items-center justify-center gap-2"
                             disabled={!isPlaying || gameOver}
                         >
                             <RotateCcw className="w-5 h-5 rotate-180" /> SIGUIENTE

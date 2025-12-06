@@ -61,17 +61,17 @@ export default function DeckPage() {
                     </AnimatePresence>
                 </div>
 
-                <div className="mt-8 flex items-center gap-4 w-full px-4">
-                    <WoodButton onClick={prevCard} className="flex-1 text-lg py-3">
-                        <ArrowLeft className="w-6 h-6 mr-2" /> ANTERIOR
+                <div className="mt-8 flex items-center gap-2 lg:gap-4 w-full px-2 lg:px-4">
+                    <WoodButton onClick={prevCard} className="flex-1 text-xs sm:text-lg py-3 lg:py-4 px-2 lg:px-4 justify-center">
+                        <ArrowLeft className="w-4 h-4 lg:w-6 lg:h-6 mr-1 lg:mr-2" /> <span className="hidden sm:inline">ANTERIOR</span><span className="sm:hidden">ATRÁS</span>
                     </WoodButton>
 
-                    <div className="wood-frame px-6 py-3 bg-[#f4e4bc] min-w-[100px] text-center transform -skew-x-6 shadow-md">
-                        <span className="font-display text-2xl text-[#3e2723]">{index + 1} / {CARDS.length}</span>
+                    <div className="wood-frame px-3 lg:px-6 py-2 lg:py-3 bg-[#f4e4bc] min-w-[60px] lg:min-w-[100px] text-center transform -skew-x-6 shadow-md">
+                        <span className="font-display text-lg lg:text-2xl text-[#3e2723]">{index + 1} / {CARDS.length}</span>
                     </div>
 
-                    <WoodButton onClick={nextCard} className="flex-1 text-lg py-3">
-                        SIGUIENTE <ArrowRight className="w-6 h-6 ml-2" />
+                    <WoodButton onClick={nextCard} className="flex-1 text-xs sm:text-lg py-3 lg:py-4 px-2 lg:px-4 justify-center">
+                        <span className="hidden sm:inline">SIGUIENTE</span><span className="sm:hidden">SIG.</span> <ArrowRight className="w-4 h-4 lg:w-6 lg:h-6 ml-1 lg:ml-2" />
                     </WoodButton>
                 </div>
             </div>
