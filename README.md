@@ -1,36 +1,23 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tempo Lottery 🏃‍♂️🏃‍♀️
 
-## Getting Started
+Un juego de lotería mexicana temática para corredores (Road & Trail), construido con Next.js y generado con IA (Gemini).
 
-First, run the development server:
+## Estructura del Proyecto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- `app/`: Aplicación Web Next.js (el juego).
+- `gen-assets/`: Scripts de Python para generar la baraja y las imágenes con IA.
+    - `generate_deck.py`: Script principal.
+    - `output/`: (Ignorado en git) Donde se generan los assets crudos.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Demo
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+[Insertar URL de Cloud Run aquí después del despliegue]
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Cómo Jugar
 
-## Learn More
+1.  Entra a la URL.
+2.  Empieza el juego.
+3.  ¡Corre! Tienes tiempo limitado para identificar las cartas.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+Proyecto creado como experimento de "Tempo - Road & Trail".

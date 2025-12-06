@@ -1,0 +1,344 @@
+[
+    {
+        "id": 1,
+        "nombre": "EL BARREDOR",
+        "categoria": "Trail",
+        "visual_prompt_description": "A personified grim reaper figure dressed in running gear, holding a broom instead of a scythe, walking behind a slow runner on a trail path."
+    },
+    {
+        "id": 2,
+        "nombre": "EL DORSAL",
+        "categoria": "Ambos",
+        "visual_prompt_description": "A crumpled race bib made of tyvek paper with the number 13 pinned awkwardly to a fabric texture, showing sweat stains."
+    },
+    {
+        "id": 3,
+        "nombre": "EL PACER",
+        "categoria": "Road",
+        "visual_prompt_description": "A runner as a pacer holding a sign that says '3:30', looking at a wristwatch, leading a pack."
+    },
+    {
+        "id": 4,
+        "nombre": "EL GEL",
+        "categoria": "Ambos",
+        "visual_prompt_description": "A squeezed, metallic running energy gel packet dripping a sticky, gooey substance"
+    },
+    {
+        "id": 5,
+        "nombre": "LA ALUCINACIÓN",
+        "categoria": "Trail",
+        "visual_prompt_description": "A delirious ultra-runner at night staring at a tree stump that looks like a monster or a goblin, eyes wide with exhaustion."
+    },
+    {
+        "id": 6,
+        "nombre": "EL MURO",
+        "categoria": "Road",
+        "visual_prompt_description": "A runner physically crashing into a brick wall built in the middle of a paved road, symbolizing the marathon bonk."
+    },
+    {
+        "id": 7,
+        "nombre": "LA AMPOLLA",
+        "categoria": "Ambos",
+        "visual_prompt_description": "A close-up of a bare foot highlighting a large, painful bubble on the heel or toe, stylized with dramatic lines."
+    },
+    {
+        "id": 8,
+        "nombre": "EL VOLUNTARIO",
+        "categoria": "Ambos",
+        "visual_prompt_description": "A smiling person wearing a bright vest, holding a cup of water out with one hand and pointing the way with the other. He is at an aid station."
+    },
+    {
+        "id": 9,
+        "nombre": "LA LÁMPARA",
+        "categoria": "Trail",
+        "visual_prompt_description": "A headlamp beaming a cone of light into darkness, casting shadows on leaves and branches."
+    },
+    {
+        "id": 10,
+        "nombre": "EL COLADO",
+        "categoria": "Road",
+        "visual_prompt_description": "A runner looking guilty, running without a bib number, trying to blend in with a crowd of legitimate runners. He is wearing the same outfit but missing the bib"
+    },
+    {
+        "id": 11,
+        "nombre": "LOS BASTONES",
+        "categoria": "Trail",
+        "visual_prompt_description": "A pair of crossed trekking poles (Z-fold style), standing upright like swords in a coat of arms."
+    },
+    {
+        "id": 12,
+        "nombre": "EL GARMIN",
+        "categoria": "Ambos",
+        "visual_prompt_description": "A chunky GPS sports watch displaying a 'Low Battery' icon or a heart rate graph."
+    },
+    {
+        "id": 13,
+        "nombre": "LA PORRA",
+        "categoria": "Road",
+        "visual_prompt_description": "A group of spectators screaming and holding a funny cardboard sign, ringing a cowbell."
+    },
+    {
+        "id": 14,
+        "nombre": "EL PIES LIGEROS",
+        "categoria": "Trail",
+        "visual_prompt_description": "A Rarámuri (Tarahumara) runner wearing traditional huaraches and clothing, running gracefully over rocky terrain."
+    },
+    {
+        "id": 15,
+        "nombre": "LA META",
+        "categoria": "Ambos",
+        "visual_prompt_description": "An inflatable finish line arch, slightly deflated or leaning, with a clock reading '00:00:00'."
+    },
+    {
+        "id": 16,
+        "nombre": "EL COACH",
+        "categoria": "Ambos",
+        "visual_prompt_description": "A stern figure holding a stopwatch and a clipboard, wearing a cap and whistle, looking judgmental."
+    },
+    {
+        "id": 17,
+        "nombre": "LA RAÍZ",
+        "categoria": "Trail",
+        "visual_prompt_description": "A gnarly, twisted tree root protruding from the ground, designed to look like a trap for a runner's foot."
+    },
+    {
+        "id": 18,
+        "nombre": "LA PLACA DE CARBONO",
+        "categoria": "Road",
+        "visual_prompt_description": "A futuristic-looking running shoe with a thick foam sole, cut in half to reveal a black carbon plate inside."
+    },
+    {
+        "id": 19,
+        "nombre": "LA MEDALLA",
+        "categoria": "Ambos",
+        "visual_prompt_description": "A heavy metal medal hanging from a ribbon, featuring a runner motif, shining with implied metallic texture."
+    },
+    {
+        "id": 20,
+        "nombre": "EL FISIO",
+        "categoria": "Ambos",
+        "visual_prompt_description": "A physiotherapist pressing their elbow hard into a grimacing runner's leg muscle (IT band)."
+    },
+    {
+        "id": 21,
+        "nombre": "EL MARCAJE",
+        "categoria": "Trail",
+        "visual_prompt_description": "A strip of orange or pink plastic marking tape tied to a tree branch, fluttering in the wind."
+    },
+    {
+        "id": 22,
+        "nombre": "EL FOTÓGRAFO",
+        "categoria": "Road",
+        "visual_prompt_description": "A person crouching with a huge camera lens, aiming directly at the viewer."
+    },
+    {
+        "id": 23,
+        "nombre": "EL ABASTO",
+        "categoria": "Trail",
+        "visual_prompt_description": "A rustic wooden table piled high with orange slices, potato chips, peanuts, and soda cups."
+    },
+    {
+        "id": 24,
+        "nombre": "EL NOVATO",
+        "categoria": "Ambos",
+        "visual_prompt_description": "A runner wearing too much gear—hydration belt, phone holder, compression socks, and a headband—looking confused."
+    },
+    {
+        "id": 25,
+        "nombre": "LA VASELINA",
+        "categoria": "Road",
+        "visual_prompt_description": "A jar of petroleum jelly with a hand scooping a large amount, symbolizing chafing prevention."
+    },
+    {
+        "id": 26,
+        "nombre": "EL PERDIDO",
+        "categoria": "Trail",
+        "visual_prompt_description": "A runner standing at a fork in the path, scratching their head, holding a map upside down."
+    },
+    {
+        "id": 27,
+        "nombre": "LOS GANCHOS",
+        "categoria": "Ambos",
+        "visual_prompt_description": "A cluster of four metal safety pins entangled together."
+    },
+    {
+        "id": 28,
+        "nombre": "LA CABRA",
+        "categoria": "Trail",
+        "visual_prompt_description": "A hybrid image of a mountain runner and a goat, climbing a steep rock face with ease."
+    },
+    {
+        "id": 29,
+        "nombre": "EL BAÑO",
+        "categoria": "Road",
+        "visual_prompt_description": "A portable toilet (Porta-potty) with a long line of impatient runners waiting outside."
+    },
+    {
+        "id": 30,
+        "nombre": "EL CHALECO",
+        "categoria": "Trail",
+        "visual_prompt_description": "A hydration vest with flasks and tubes, looking like a backpack with straws coming out."
+    },
+    {
+        "id": 31,
+        "nombre": "EL DNF",
+        "categoria": "Ambos",
+        "visual_prompt_description": "A sad and exhausted runner sitting on a curb or rock, head in hands"
+    },
+    {
+        "id": 32,
+        "nombre": "EL KILÓMETRO",
+        "categoria": "Road",
+        "visual_prompt_description": "A roadside milestone marker or sign reading 'KM 42', indicating the end is near."
+    },
+    {
+        "id": 33,
+        "nombre": "EL ENLODADO",
+        "categoria": "Trail",
+        "visual_prompt_description": "A runner covered entirely in mud, slipping and sliding, with only their eyes and teeth white and visible."
+    },
+    {
+        "id": 34,
+        "nombre": "EL ISOTÓNICO",
+        "categoria": "Ambos",
+        "visual_prompt_description": "A paper cup filled with neon blue or lime green liquid, splashing slightly."
+    },
+    {
+        "id": 35,
+        "nombre": "EL VETERANO",
+        "categoria": "Ambos",
+        "visual_prompt_description": "An older runner with grey hair and wrinkled skin, wearing vintage short-shorts and a singlet, looking tough and experienced."
+    },
+    {
+        "id": 36,
+        "nombre": "EL DESNIVEL",
+        "categoria": "Trail",
+        "visual_prompt_description": "A jagged line graph showing a steep elevation profile, resembling a mountain range."
+    },
+    {
+        "id": 37,
+        "nombre": "EL QUE CAMINA",
+        "categoria": "Road",
+        "visual_prompt_description": "A casual jogger wearing headphones and a heavy cotton t-shirt, moving very slowly and happily."
+    },
+    {
+        "id": 38,
+        "nombre": "EL CALAMBRE",
+        "categoria": "Ambos",
+        "visual_prompt_description": "A runner gripping their calf muscle in agony, with jagged lightning bolt lines symbolizing the pain."
+    },
+    {
+        "id": 39,
+        "nombre": "LA PLAYERA",
+        "categoria": "Ambos",
+        "visual_prompt_description": "A generic race t-shirt folded, displaying a graphic of a runner and the year."
+    },
+    {
+        "id": 40,
+        "nombre": "EL QUE VOMITA",
+        "categoria": "Ambos",
+        "visual_prompt_description": "A runner bent over hands on knees, looking green in the face, regretting their life choices."
+    },
+    {
+        "id": 41,
+        "nombre": "EL LOCUTOR",
+        "categoria": "Road",
+        "visual_prompt_description": "A frantic race announcer with a mustache holding a vintage microphone close to his mouth. He is wearing a cap and a generic event polo shirt, gesturing wildly with one hand as if shouting the arrival of the winner. The background implies a finish line atmosphere without being cluttered."
+    },
+    {
+        "id": 42,
+        "nombre": "LA BAJADA",
+        "categoria": "Trail",
+        "visual_prompt_description": "A runner leaning back, arms wide for balance, descending a steep, rocky slope recklessly."
+    },
+    {
+        "id": 43,
+        "nombre": "EL MADRUGADOR",
+        "categoria": "Ambos",
+        "visual_prompt_description": "A runner lacing up shoes while a rooster crows and the sun is just barely peeking over the horizon."
+    },
+    {
+        "id": 44,
+        "nombre": "EL ASFALTO",
+        "categoria": "Road",
+        "visual_prompt_description": "A texture of cracked black pavement with a white or yellow road line painted down the middle."
+    },
+    {
+        "id": 45,
+        "nombre": "LA UÑA NEGRA",
+        "categoria": "Ambos",
+        "visual_prompt_description": "A foot with a single toe with a blackened, bruised toenail, about to fall off (a badge of honor)."
+    },
+    {
+        "id": 46,
+        "nombre": "EL COMELÓN",
+        "categoria": "Trail",
+        "visual_prompt_description": "A runner stuffing their face with two hands full of pretzels, bananas, and sandwiches simultaneously."
+    },
+    {
+        "id": 47,
+        "nombre": "LA VALLA",
+        "categoria": "Road",
+        "visual_prompt_description": "A metal crowd control barricade, separating the runner from the spectators."
+    },
+    {
+        "id": 48,
+        "nombre": "EL ESTIRAMIENTO",
+        "categoria": "Ambos",
+        "visual_prompt_description": "A runner in an awkward yoga-like pose or stretching a hamstring against a tree/post."
+    },
+    {
+        "id": 49,
+        "nombre": "LA CUMBRE",
+        "categoria": "Trail",
+        "visual_prompt_description": "A runner standing on the very peak of a mountain with arms raised in victory, overlooking clouds."
+    },
+    {
+        "id": 50,
+        "nombre": "EL PODIO",
+        "categoria": "Ambos",
+        "visual_prompt_description": "A wooden three-tiered platform with the numbers 1, 2, and 3 painted on it."
+    },
+    {
+        "id": 51,
+        "nombre": "EL PERRO",
+        "categoria": "Trail",
+        "visual_prompt_description": "An angry dog chasing a fearful runner in a trail."
+    },
+    {
+        "id": 52,
+        "nombre": "EL INFLUENCER",
+        "categoria": "Ambos",
+        "visual_prompt_description": "A runner in trendy, high-end gear holding a selfie stick with a smartphone attached. The subject is looking at the phone screen with a staged, exaggerated smile and a thumbs-up, completely ignoring the path ahead. The illustration captures the vanity and modern humor of content creation during a race."
+    },
+    {
+        "id": 53,
+        "nombre": "LA MANTA TÉRMICA",
+        "categoria": "Trail",
+        "visual_prompt_description": "A runner huddled and wrapped tightly in a crinkled, metallic gold and silver emergency foil blanket (space blanket), sitting on a rock with only their face visible, reflecting light in a geometric, jagged pattern."
+    },
+    {
+        "id": 54,
+        "nombre": "LA CERVEZA",
+        "categoria": "Ambos",
+        "visual_prompt_description": "A classic brown glass beer bottle or a plastic cup overflowing with foam, condensation dripping down the sides, positioned as the ultimate post-race reward."
+    },
+    {
+        "id": 55,
+        "nombre": "LA BANDANA",
+        "categoria": "Ambos",
+        "visual_prompt_description": "A multi-functional fabric tube neck gaiter (buff) with a colorful geometric pattern, displayed folded, floating in the center like a sacred textile artifact."
+    },
+    {
+        "id": 56,
+        "nombre": "EL QUE LLEVA MÚSICA",
+        "categoria": "Ambos",
+        "visual_prompt_description": "A runner jogging enthusiastically with a large, boxy Bluetooth speaker strapped awkwardly to their hydration vest, emitting illustrated sound waves, looking oblivious to the annoyance of others."
+    },
+    {
+        "id": 57,
+        "nombre": "EL BACHE",
+        "categoria": "Road",
+        "visual_prompt_description": "A menacing, jagged pothole in the asphalt, dark and deep, with a runner's sneaker stepping perilously close to the edge, capturing the fear of a twisted ankle."
+    }
+]
