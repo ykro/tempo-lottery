@@ -322,23 +322,5 @@
         "nombre": "LA CERVEZA",
         "categoria": "Ambos",
         "visual_prompt_description": "A classic brown glass beer bottle or a plastic cup overflowing with foam, condensation dripping down the sides, positioned as the ultimate post-race reward."
-    },
-    {
-        "id": 55,
-        "nombre": "LA BANDANA",
-        "categoria": "Ambos",
-        "visual_prompt_description": "A multi-functional fabric tube neck gaiter (buff) with a colorful geometric pattern, displayed folded, floating in the center like a sacred textile artifact."
-    },
-    {
-        "id": 56,
-        "nombre": "EL QUE LLEVA MÚSICA",
-        "categoria": "Ambos",
-        "visual_prompt_description": "A runner jogging enthusiastically with a large, boxy Bluetooth speaker strapped awkwardly to their hydration vest, emitting illustrated sound waves, looking oblivious to the annoyance of others."
-    },
-    {
-        "id": 57,
-        "nombre": "EL BACHE",
-        "categoria": "Road",
-        "visual_prompt_description": "A menacing, jagged pothole in the asphalt, dark and deep, with a runner's sneaker stepping perilously close to the edge, capturing the fear of a twisted ankle."
     }
 ]

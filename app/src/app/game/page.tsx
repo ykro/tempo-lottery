@@ -38,7 +38,7 @@ export default function GamePage() {
         const shuffled = shuffle(CARDS);
         setBoard(shuffled.slice(0, BOARD_SIZE));
         setDeck(shuffle(CARDS));
-        setCurrentCardIndex(-1);
+        setCurrentCardIndex(0);
         setLives(3);
         setLives(3);
         setBeans(new Set());
@@ -295,6 +295,13 @@ export default function GamePage() {
                                         alt={card.title}
                                         className="w-full h-full object-cover opacity-90 mix-blend-multiply"
                                     />
+
+                                    {/* Name Overlay */}
+                                    <div className="absolute bottom-0 w-full bg-[#3e2723]/90 py-1 px-0.5 text-center flex items-center justify-center min-h-[20%]">
+                                        <span className="text-[10px] sm:text-xs font-bold text-[#f4e4bc] uppercase tracking-wider leading-none font-display line-clamp-2">
+                                            {card.title}
+                                        </span>
+                                    </div>
 
                                     {beans.has(idx) && (
                                         <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
