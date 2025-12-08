@@ -11,7 +11,9 @@ Un juego de lotería mexicana temática para corredores (Road & Trail), construi
 
 ## Demo
 
-[Insertar URL de Cloud Run aquí después del despliegue]
+[https://tempo-lottery-504954692234.us-central1.run.app/](https://tempo-lottery-504954692234.us-central1.run.app/)
+
+![Gameplay Screenshot](assets/game_screenshot.jpg)
 
 ## Cómo Jugar
 
