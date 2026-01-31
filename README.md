@@ -11,7 +11,7 @@ Un juego de lotería mexicana temática para corredores (Road & Trail), construi
 
 ## Demo
 
-[https://tempo-lottery-504954692234.us-central1.run.app/](https://tempo-lottery-504954692234.us-central1.run.app/)
+[https://tempo-lottery-622959071640.us-central1.run.app/](https://tempo-lottery-622959071640.us-central1.run.app/)
 
 ![Gameplay Screenshot](assets/game_screenshot.jpg)
 

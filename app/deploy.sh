@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Configuration
-PROJECT_ID="caramel-banner-478016-t5"
+PROJECT_ID="ai-experiments-480016"
 SERVICE_NAME="tempo-lottery"
 REGION="us-central1"
 
